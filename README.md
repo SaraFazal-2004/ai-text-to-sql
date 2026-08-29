@@ -1,50 +1,38 @@
 # AI Text-to-SQL
 
-An AI-powered application that converts natural language questions into SQL queries. The project allows users to interact with a database using simple English instructions instead of writing SQL manually.
+AI Text-to-SQL is a Python-based project that demonstrates how natural language can be converted into SQL queries using Artificial Intelligence.
+
+The project uses a sample e-commerce database with synthetic data and is designed to provide the foundation for querying the database using natural language.
 
 ## Project Overview
 
-AI Text-to-SQL is designed to make database querying easier by translating natural language input into SQL statements using Artificial Intelligence.
+The purpose of this project is to explore how Artificial Intelligence can be used to make database querying easier.
 
-For example, instead of writing:
+Instead of requiring a user to write SQL manually, the system is intended to accept a natural language question such as:
 
-```sql
-SELECT * FROM employees WHERE salary > 50000;
+```text
+Show all products with a price greater than 5000.
 ```
 
-A user can simply ask:
+and generate an SQL query based on the e-commerce database structure.
 
-> Show all employees with a salary greater than 50,000.
+## Current Features
 
-The application processes the user's request and generates the appropriate SQL query.
-
-## Features
-
-* Convert natural language text into SQL queries
-* AI-powered SQL generation
-* Connect with a database
-* Execute generated SQL queries
-* Display query results
-* Support for common SQL operations such as:
-
-  * SELECT
-  * WHERE
-  * ORDER BY
-  * GROUP BY
-  * JOIN
-  * COUNT
-  * SUM
-  * AVG
-* Environment variable support for API keys
-* Sample database generation for testing
+* Python project setup
+* E-commerce sample database
+* Synthetic e-commerce data generation using Faker
+* Environment variable configuration
+* OpenAI API configuration
+* Database generation script
+* Structured project directory for Text-to-SQL development
 
 ## Technologies Used
 
 * Python
 * OpenAI API
-* SQL / SQLite
 * Faker
 * Python-dotenv
+* SQLite
 
 ## Project Structure
 
@@ -52,18 +40,15 @@ The application processes the user's request and generates the appropriate SQL q
 txt-to-sql/
 │
 ├── data/
-│   └── database files and sample data
+│   └── e-commerce database
 │
 ├── scripts/
 │   └── generate_database.py
 │
 ├── .env
 ├── requirements.txt
-├── README.md
-└── main.py
+└── README.md
 ```
-
-> Note: The project structure may change as additional features are developed.
 
 ## Installation
 
@@ -101,7 +86,7 @@ pip install -r requirements.txt
 
 ## Environment Variables
 
-Create a file named `.env` in the project root directory.
+Create a `.env` file in the project root directory.
 
 Add your OpenAI API key:
 
@@ -111,9 +96,9 @@ OPENAI_API_KEY=your_api_key_here
 
 Replace `your_api_key_here` with your actual API key.
 
-**Important:** Never upload your `.env` file or API key to GitHub.
+Do not upload the `.env` file or API key to GitHub.
 
-You should add the following to your `.gitignore` file:
+Add the following to `.gitignore`:
 
 ```text
 .env
@@ -121,103 +106,70 @@ You should add the following to your `.gitignore` file:
 __pycache__/
 ```
 
-## Generate the Sample Database
+## Generate the E-Commerce Database
 
-Run the database generation script:
+The project includes a database generation script:
 
 ```bash
 python scripts/generate_database.py
 ```
 
-This will create and populate a sample database that can be used to test natural language queries.
+The script uses Faker to generate synthetic e-commerce data for testing and development.
 
-## Example Usage
+The generated database is stored in the `data/` directory.
 
-A user can enter a question such as:
+## Example Natural Language Queries
 
-```text
-Show all customers from Islamabad.
-```
-
-The AI may generate:
-
-```sql
-SELECT *
-FROM customers
-WHERE city = 'Islamabad';
-```
-
-Another example:
+The e-commerce database can be queried using questions such as:
 
 ```text
-Show the top 5 highest-paid employees.
+Show all products with a price greater than 5000.
 ```
 
-Generated SQL:
-
-```sql
-SELECT *
-FROM employees
-ORDER BY salary DESC
-LIMIT 5;
+```text
+Show the top 10 most expensive products.
 ```
 
-## Security Considerations
+```text
+How many customers are registered in the database?
+```
 
-Generated SQL should be validated before execution, especially when working with production databases.
+```text
+Show all orders placed by a specific customer.
+```
 
-Recommended practices include:
+```text
+What is the total sales amount?
+```
 
-* Use read-only database access where possible.
-* Restrict dangerous SQL commands such as:
+These questions are intended to be converted into SQL queries by the Text-to-SQL system.
 
-  * DROP
-  * DELETE
-  * UPDATE
-  * ALTER
-* Validate AI-generated SQL before execution.
-* Never expose API keys in source code.
-* Use environment variables to store sensitive credentials.
+## Project Objective
 
-## Project Goal
+The objective of this project is to develop an AI-based Text-to-SQL system that understands natural language questions and converts them into SQL queries for an e-commerce database.
 
-The goal of this project is to demonstrate how Artificial Intelligence and Large Language Models can simplify database interaction by allowing users to communicate with databases using natural language.
+The project is being developed step by step, beginning with the creation of the e-commerce database and synthetic data.
 
-This project can be further expanded to support:
+## Future Development
 
-* Multiple database systems
-* SQL Server
-* MySQL
-* PostgreSQL
-* SQLite
-* Web-based user interface
-* Chat-based database interaction
+The project can be extended to include:
+
+* Natural language to SQL query generation
+* OpenAI API integration
+* E-commerce database schema understanding
+* SQL query execution
+* Query result display
+* SQL query validation
 * Query history
-* Database schema visualization
-* SQL query explanation
-* Role-based database access
-
-## Future Improvements
-
-*  Support SQL Server
-*  Support multiple databases
-*  Add database schema detection
-*  Validate generated SQL
-*  Add SQL query explanations
-*  Add query history
-*  Improve error handling
-*  Add automated tests
+* Web-based user interface
+* Support for additional database systems
 
 ## Author
 
 **Sara Fazal**
 
-GitHub: [SaraFazal-2004](https://github.com/SaraFazal-2004?utm_source=chatgpt.com)
+GitHub: [SaraFazal-2004](https://github.com/SaraFazal-2004)
 
 ## License
 
-This project is currently intended for educational and learning purposes.
-
----
-
-If you find this project useful, consider giving the repository a star.
+This project is intended for educational and learning purposes.
