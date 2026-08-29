@@ -1,0 +1,97 @@
+[
+  {
+    "id": 1,
+    "question": "What is the total revenue?",
+    "clarification_required": false,
+    "category": "aggregation"
+  },
+  {
+    "id": 2,
+    "question": "How many customers do we have?",
+    "clarification_required": false,
+    "category": "count"
+  },
+  {
+    "id": 3,
+    "question": "How many orders were placed in 2025?",
+    "clarification_required": false,
+    "category": "date_filter"
+  },
+  {
+    "id": 4,
+    "question": "Which customer spent the most money?",
+    "clarification_required": false,
+    "category": "ranking"
+  },
+  {
+    "id": 5,
+    "question": "What are the top 10 products?",
+    "clarification_required": true,
+    "clarification_reason": "Top can mean revenue, units sold, rating, or another metric.",
+    "category": "ambiguous_ranking"
+  },
+  {
+    "id": 6,
+    "question": "Show me the best products.",
+    "clarification_required": true,
+    "clarification_reason": "The meaning of best is ambiguous.",
+    "category": "ambiguous_ranking"
+  },
+  {
+    "id": 7,
+    "question": "Show me recent orders.",
+    "clarification_required": true,
+    "clarification_reason": "Recent does not specify a time period.",
+    "category": "ambiguous_date"
+  },
+  {
+    "id": 8,
+    "question": "Which customers are most valuable?",
+    "clarification_required": true,
+    "clarification_reason": "Valuable could mean spending, order frequency, or another metric.",
+    "category": "ambiguous_metric"
+  },
+  {
+    "id": 9,
+    "question": "How much revenue did each category generate in 2025?",
+    "clarification_required": false,
+    "category": "grouping"
+  },
+  {
+    "id": 10,
+    "question": "Which country has the most customers?",
+    "clarification_required": false,
+    "category": "grouping"
+  },
+  {
+    "id": 11,
+    "question": "What is the average order value?",
+    "clarification_required": false,
+    "category": "aggregation"
+  },
+  {
+    "id": 12,
+    "question": "Which products have the highest ratings?",
+    "clarification_required": false,
+    "category": "ranking"
+  },
+  {
+    "id": 13,
+    "question": "Show me expensive products.",
+    "clarification_required": true,
+    "clarification_reason": "Expensive does not define a price threshold.",
+    "category": "ambiguous_filter"
+  },
+  {
+    "id": 14,
+    "question": "How many completed orders were made using credit cards?",
+    "clarification_required": false,
+    "category": "filter"
+  },
+  {
+    "id": 15,
+    "question": "Which customers ordered the most?",
+    "clarification_required": false,
+    "category": "ranking"
+  }
+]
