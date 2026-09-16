@@ -22,7 +22,7 @@ and generate an SQL query based on the e-commerce database structure.
 * E-commerce sample database
 * Synthetic e-commerce data generation using Faker
 * Environment variable configuration
-* OpenAI API configuration
+* Gemini API configuration
 * Database generation script
 * Structured project directory for Text-to-SQL development
 
