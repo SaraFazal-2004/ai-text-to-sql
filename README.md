@@ -29,7 +29,7 @@ and generate an SQL query based on the e-commerce database structure.
 ## Technologies Used
 
 * Python
-* OpenAI API
+* GeminiAI API
 * Faker
 * Python-dotenv
 * SQLite
